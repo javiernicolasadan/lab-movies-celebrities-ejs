@@ -1,0 +1,15 @@
+<h2>movie-details</h2>
+ <%  console.log((movieDetails._id).toString())  %> 
+ <%  [movieDetails].forEach(movie => {  %>
+   <h3>Title:<%- movie.title  %></h3>
+  <h3>Genre:<%- movie.genre %></h3>
+  <h3>Plot:<%- movie.plot  %></h3> 
+ <%  })  %>
+ <%  movieDetails.cast.forEach(cast => {  %>
+    <h3>Cast name:<%- cast.name  %></h3>
+   <h3>Occupation:<%- cast.occupation %></h3>
+   <h3>CatchPhrase:<%- cast.catchPhrase  %></h3> 
+  <%  })  %>
+<form method="post" action="/movies/<%- (movieDetails._id).toString() %>/delete">
+    <button>Delete</button>
+</form>

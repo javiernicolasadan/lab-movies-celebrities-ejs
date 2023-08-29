@@ -1,0 +1,20 @@
+<h2>new movie</h2>
+<form method="POST">
+  <label>Title:<input name="title" /></label>
+  <br />
+  <label>Genre:<input name="genre" /></label>
+  <br />
+  <label>Plot:<input name="plot" /></label>
+  <br />
+  <% /* console.log("new-movie.ejs", allCelebrities) */ %>
+  <label
+    >Cast:
+    <select multiple name="cast">
+      <% allCelebrities.forEach(celebrity => { %>
+      <option value="<%-[celebrity._id]%>"><%- celebrity.name%></option>
+      <% }) %>
+    </select>
+  </label>
+  <br />
+  <button type="submit">New Movie</button>
+</form>
