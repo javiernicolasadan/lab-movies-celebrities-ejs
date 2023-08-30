@@ -1,1 +1,18 @@
-<h2>edit-movies</h2>
+<h2>EDIT MOVIE</h2>
+<% /* console.log("This are my movie details", movieDetails) */ %> 
+<% /* console.log("This are my celebrities", celebrities) */ %>
+<form method="post">
+  <label>Title<input name="title" value="<%- movieDetails.title %>" /></label>
+  <br />
+  <label>Genre<input name="genre" value="<%- movieDetails.genre %>" /></label>
+  <br />
+  <label>Plot<input name="plot" value="<%- movieDetails.plot %>" /></label>
+  <br />
+  <select multiple name="cast">
+    <% celebrities.forEach(celebrity => { %>
+    <option value="<%- celebrity._id %>"><%- celebrity.name %> <%- %></option>
+    <% }) %>
+  </select>
+  <br />
+  <button type="submit">Edit Movie</button>
+</form>
