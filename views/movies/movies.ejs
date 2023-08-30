@@ -1,7 +1,11 @@
 <h2>ALL MOVIES</h2>
-<% /* console.log("here i have all my movies", allMovies) */ %> <%
-allMovies.forEach(movie => { %>
+<% /* console.log("here i have all my movies", allMovies) */ %> 
+<% allMovies.forEach(movie => { %>
+  <h4>Movie title:</h4>
 <a href="/movies/<%-movie._id%>"><%- movie.title %></a>
+<h4>Movie plot:</h4>
+<h5><%- movie.plot %></h5>
+
 <button>
   <a href="/movies/<%- movie._id%>/edit">Edit movie</a>
 </button>

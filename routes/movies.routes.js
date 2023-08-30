@@ -20,12 +20,12 @@ router.get("/create",  (req, res) =>  {
 })
 router.get("/new-movie", async (req, res) => {
     const allCelebrities = await Celebrity.find()
-    console.log(allCelebrities)
+    /* console.log(allCelebrities) */
     res.render("movies/new-movie", {allCelebrities})
 })
 
 router.post("/new-movie", async (req, res) => {
-    console.log(req.body)
+    /* console.log(req.body) */
     await Movie.create(req.body)
     res.redirect("/movies")
 })
